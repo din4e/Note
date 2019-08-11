@@ -2,16 +2,13 @@
 
 # Jupyter
 
-#### .ipynb转.py
-
  ```bash
- jupyter nbconvert --to script demo.ipynb 
- ```
-
-#### 启动 
-
-```bash
+# 启动jupyter
 jupyter notebook
+# .ipynb转.py
+jupyter nbconvert --to script demo.ipynb 
+# 关闭jupyter
+crtl+c ctrl+c
 ```
 
 # Numpy
@@ -34,22 +31,16 @@ import numpy  as np
 np.set_printoptions(threshold=np.inf) # 完整输出numpy数组
 ```
 
-### 数据保存读取
-
-### 修改数据
-
-#### 对某一列赋值
-
 # Pandas
 
-## 安装使用
+## Pandas安装使用
 
 ``` python
 import pandas as pd
 import numpy  as np
 ```
 
-## 基本类型
+## Pandas基本类型
 
 ```python
 df[["weight"]] # DataFrame
@@ -96,7 +87,7 @@ DataFrame本质是一种带行标签和列标签、支持相同类型数据和�
 
 Series对象将一组数据和一组索引绑定在一起。可以使用```values```和```index```属性获取数据。```values```返回结果和Numpy一致。
 
-## 基本操作
+## Pandas基本操作
 
 ### 数据保存读取
 
@@ -120,3 +111,28 @@ df[index] = 0.0 # index是未初始化的列
 max_min_scaler = lambda x : (x-np.min(x))/(np.max(x)-np.min(x))
 df[index] = df[[index]].apply(max_min_scaler)
 ```
+
+### 包函数
+
+#### df.describe()
+
+#### df.nunique()
+
+#### [.drop()](https://blog.csdn.net/nuaadot/article/details/78304642)
+
+# 数据分析
+
+## .unique()
+
+```python
+unlist=np.unique(df["colume"])
+df.nunique()
+```
+
+# 参考资料
+
+[蓝鲸网站使用python进行数据清洗](http://bluewhale.cc/2016-08-21/python-data-cleaning.html)  
+[Pandas数据清洗](https://www.cnblogs.com/BoyceYang/p/8182053.html)  
+[BiliBili数值处理](https://www.bilibili.com/video/av52783056/?p=3)  
+[pandas-profiling](https://www.zhihu.com/question/24590883/answer/782584888)  
+[BiliBili PCA的使用](https://www.bilibili.com/video/av28790123?from=search&seid=15676878223827506884)
