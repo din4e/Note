@@ -98,7 +98,7 @@ git reset –hard
 git pull
 ```
 
-# 参考资料
+## 参考资料
 
 [Gitbook中文版](http://gitbook.liuhui998.com/)  
 [git rebase使用场景](https://www.jianshu.com/p/4079284dd970)

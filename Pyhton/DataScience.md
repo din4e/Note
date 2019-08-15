@@ -96,6 +96,15 @@ df=pd.read_csv(inputfilename)
 df.to_csv(inputfilename)
 ```
 
+#### 获取Pandas的列属性
+
+```python
+[column for column in df]
+df.columns.values # array
+list(df)
+df.columns # Index 可以通过 tolist(), 或者 list（array） 转换为list
+```
+
 ### 修改数据
 
 #### 对某一列赋值
