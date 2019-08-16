@@ -6,7 +6,7 @@
 # 启动jupyter
 jupyter notebook
 # .ipynb转.py
-jupyter nbconvert --to script demo.ipynb 
+jupyter nbconvert --to script demo.ipynb
 # 关闭jupyter
 crtl+c ctrl+c
 ```
@@ -70,7 +70,7 @@ df["weight"] # Series
 2      0.216667
 3      0.366667
 4      0.433333
-         ...   
+         ...
 495    0.150000
 496    0.733333
 497    0.300000
@@ -79,7 +79,7 @@ df["weight"] # Series
 Name: weight, Length: 500, dtype: float64
 ```
 
-### DataFrame 
+### DataFrame
 
 DataFrame本质是一种带行标签和列标签、支持相同类型数据和缺失值的多维数组。Pandas建立在Numpy之上。重点是**数据添加标签**，**处理缺失值**。
 
@@ -110,8 +110,8 @@ df.columns # Index 可以通过 tolist(), 或者 list（array） 转换为list
 #### 对某一列赋值
 
 ``` python
-df=pd.DataFrame(ts.get_zz500s()) 
-df[index] = 0.0 # index是未初始化的列 
+df=pd.DataFrame(ts.get_zz500s())
+df[index] = 0.0 # index是未初始化的列
 ```
 
 #### 对某一列做归一化操作
@@ -137,6 +137,22 @@ df[index] = df[[index]].apply(max_min_scaler)
 unlist=np.unique(df["colume"])
 df.nunique()
 ```
+
+# LightingBGM
+
+## f1_score
+
+```python
+params{
+       metric:"None",
+},
+
+def f1_scorer(pred,train_data)
+       return
+```
+
+参考:[feval in lgb.cv giving unexpected results](https://github.com/microsoft/LightGBM/issues/1483)  
+[f1_score metric in lightgbm](https://stackoverflow.com/questions/50931168/f1-score-metric-in-lightgbm)
 
 # 参考资料
 
