@@ -142,16 +142,21 @@ df.nunique()
 
 ## f1_score
 
+二分类问题的F1数值计算
+
 ```python
 params{
        metric:"None",
 },
 
-def f1_scorer(pred,train_data)
-       return
+def f1_scorer(pred, train_data):
+    return "f1_score", f1_score(train_data.get_label(), np.round(pred), average="weighted"), True
+
+bst = lgb.train(params, dtrain, num_boost_round = 30000, valid_sets = dvalid,verbose_eval = 400,early_stopping_rounds = 200, feval = f1_scorer )
 ```
 
-参考:[feval in lgb.cv giving unexpected results](https://github.com/microsoft/LightGBM/issues/1483)  
+参考:  
+[feval in lgb.cv giving unexpected results](https://github.com/microsoft/LightGBM/issues/1483)  
 [f1_score metric in lightgbm](https://stackoverflow.com/questions/50931168/f1-score-metric-in-lightgbm)
 
 # 参考资料
