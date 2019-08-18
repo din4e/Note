@@ -140,7 +140,7 @@ df.nunique()
 
 # LightingBGM
 
-## f1_score
+## LightingBGM评价函数设置为f1_score
 
 二分类问题的F1数值计算
 
@@ -151,13 +151,15 @@ params{
 
 def f1_scorer(pred, train_data):
     return "f1_score", f1_score(train_data.get_label(), np.round(pred), average="weighted"), True
+# pred是一个维度数组，train_data是一个LightingBGM.Dataset。
 
 bst = lgb.train(params, dtrain, num_boost_round = 30000, valid_sets = dvalid,verbose_eval = 400,early_stopping_rounds = 200, feval = f1_scorer )
 ```
 
 参考:  
 [feval in lgb.cv giving unexpected results](https://github.com/microsoft/LightGBM/issues/1483)  
-[f1_score metric in lightgbm](https://stackoverflow.com/questions/50931168/f1-score-metric-in-lightgbm)
+[f1_score metric in lightgbm](https://stackoverflow.com/questions/50931168/f1-score-metric-in-lightgbm)  
+[sklearn.metrics.f1_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
 
 # 参考资料
 
