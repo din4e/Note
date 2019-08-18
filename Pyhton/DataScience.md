@@ -23,6 +23,23 @@ import numpy  as np
 
 ## 基本操作
 
+### [```numpy.argmax```用法](https://www.cnblogs.com/touch-skyer/p/8509217.html)
+
+argmax返回的是最大数的索引，argmax有一个参数axis，默认是0，表示第几维的最大值。
+
+```python
+import numpy as np
+a = np.array([[1, 5, 5, 2],
+              [9, 6, 2, 8],
+              [3, 7, 9, 1]])
+print(np.argmax(a, axis=0)) // [1,2,2,1]
+
+a = np.array([[1, 5, 5, 2],
+              [9, 6, 2, 8],
+              [3, 7, 9, 1]])
+print(np.argmax(a, axis=1)) // [1,0,2]
+```
+
 ### 设置
 
 #### 完整输出数组
