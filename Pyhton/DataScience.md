@@ -106,16 +106,25 @@ Series对象将一组数据和一组索引绑定在一起。可以使用```value
 
 ## Pandas基本操作
 
-### 数据保存读取
+### 获取信息以及设置
 
-```python
-df=pd.read_csv(inputfilename)
+#### 数据保存读取
+
+```py
+df=pd.read_csv(inputfilename,sep='\t',encloding='utf-8')
 df.to_csv(inputfilename)
+```
+
+#### Pandas设置现实行列
+
+```py
+pd.options.display.max_columns = None
+pd.options.display.max_rows = None
 ```
 
 #### 获取Pandas的列属性
 
-```python
+```py
 [column for column in df]
 df.columns.values # array
 list(df)
