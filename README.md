@@ -4,7 +4,9 @@
 
 ## Cpp相关的内容
 
-[Cpp面试基础](Cpp/CppInterview.md)
+### [Cpp面试基础](Cpp/CppInterview.md)
+
+### [C++PrimerPlus](Cpp/C++PrimerPlus.md)
 
 ## Python相关内容
 
@@ -15,6 +17,12 @@
 ### [一些奇怪的技术](Pyhton/Novelty.md)
 
 Python根据地址获取经纬度及求距离
+
+## 机器学习
+
+### [《统计机器学习》](StatisticalLearning/StatisticalLearning.md)
+
+李航 第一版
 
 ## 一些杂乱的技术笔记
 
