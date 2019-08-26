@@ -147,6 +147,11 @@ max_min_scaler = lambda x : (x-np.min(x))/(np.max(x)-np.min(x))
 df[index] = df[[index]].apply(max_min_scaler)
 ```
 
+#### [Pandas循环更高效](https://towardsdatascience.com/how-to-make-your-pandas-loop-71-803-times-faster-805030df4f06)
+
+1. 使用```.apply()```方法；
+2. 使用numpy的```.values```矢量化，具体原因来源于[访问局部性](https://en.wikipedia.org/wiki/Locality_of_reference)。
+
 ### 包函数
 
 #### df.describe()
