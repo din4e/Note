@@ -1,29 +1,26 @@
-[TOC]
+# DataScicence
 
-# Jupyter
+## Jupyter
 
- ```bash
-# 启动jupyter
-jupyter notebook
-# .ipynb转.py
-jupyter nbconvert --to script demo.ipynb
-# 关闭jupyter
-crtl+c ctrl+c
+```bash
+jupyter notebook # 启动jupyter
+jupyter nbconvert --to script demo.ipynb # .ipynb转.py
+crtl+c ctrl+c # 关闭jupyter
 ```
 
-# Numpy
+## Numpy
 
-## 安装使用
+### 安装使用
 
 ``` python
 import numpy  as np
 ```
 
-## 基本类型
+### 基本类型
 
-## 基本操作
+### 基本操作
 
-### [```numpy.argmax```用法](https://www.cnblogs.com/touch-skyer/p/8509217.html)
+#### [```numpy.argmax()```用法](https://www.cnblogs.com/touch-skyer/p/8509217.html)
 
 argmax返回的是最大数的索引，argmax有一个参数axis，默认是0，表示第几维的最大值。
 
@@ -40,24 +37,22 @@ a = np.array([[1, 5, 5, 2],
 print(np.argmax(a, axis=1)) // [1,0,2]
 ```
 
-### 设置
-
-#### 完整输出数组
+#### 设置完整输出数组
 
 ```python
 np.set_printoptions(threshold=np.inf) # 完整输出numpy数组
 ```
 
-# Pandas
+## Pandas
 
-## Pandas安装使用
+### Pandas安装使用
 
 ``` python
 import pandas as pd
 import numpy  as np
 ```
 
-## Pandas基本类型
+### Pandas基本类型
 
 ```python
 df[["weight"]] # DataFrame
@@ -104,11 +99,9 @@ DataFrame本质是一种带行标签和列标签、支持相同类型数据和�
 
 Series对象将一组数据和一组索引绑定在一起。可以使用```values```和```index```属性获取数据。```values```返回结果和Numpy一致。
 
-## Pandas基本操作
+### Pandas基本操作
 
-### 获取信息以及设置
-
-#### 数据保存读取
+#### 数据读取保存
 
 ```py
 df=pd.read_csv(inputfilename,sep='\t',encloding='utf-8')
@@ -131,8 +124,6 @@ list(df)
 df.columns # Index 可以通过 tolist(), 或者 list（array） 转换为list
 ```
 
-### 修改数据
-
 #### 对某一列赋值
 
 ``` python
@@ -152,7 +143,7 @@ df[index] = df[[index]].apply(max_min_scaler)
 1. 使用```.apply()```方法；
 2. 使用numpy的```.values```矢量化，具体原因来源于[访问局部性](https://en.wikipedia.org/wiki/Locality_of_reference)。
 
-### 包函数
+---
 
 #### df.describe()
 
@@ -160,7 +151,7 @@ df[index] = df[[index]].apply(max_min_scaler)
 
 #### [.drop()](https://blog.csdn.net/nuaadot/article/details/78304642)
 
-# 数据分析
+## 数据分析
 
 ## .unique()
 
@@ -169,9 +160,9 @@ unlist=np.unique(df["colume"])
 df.nunique()
 ```
 
-# LightingBGM
+## LightingBGM
 
-## LightingBGM评价函数设置为f1_score
+### LightingBGM评价函数设置为f1_score
 
 二分类问题的F1数值计算
 
