@@ -2,11 +2,15 @@
 
 阿東有在努力积累吖.
 
-## Cpp相关的内容
+## C++相关的内容
 
-### [Cpp面试基础](Cpp/CppInterview.md)
+### [C++面试基础](Cpp/CppInterview.md)
 
 ### [C++PrimerPlus](Cpp/C++PrimerPlus.md)
+
+## 不同系统下的配置
+
+### [Xcode](OSDev/Xcode.md)
 
 ## Python相关内容
 
