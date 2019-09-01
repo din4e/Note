@@ -6,9 +6,11 @@
 
 ### [C++面试基础](Cpp/CppInterview.md)
 
-### [C++PrimerPlus](Cpp/C++PrimerPlus.md)
+### [C++PrimerPlus阅读笔记](Cpp/C++PrimerPlus.md)
 
-## 不同系统下的配置
+## 不同系统下的工具及配置
+
+### [Git](OSDev/git.md)
 
 ### [Xcode](OSDev/Xcode.md)
 
@@ -30,8 +32,8 @@ Python根据地址获取经纬度及求距离
 
 ## 一些杂乱的技术笔记
 
-[2月的笔记](Tech/Tech1902.md)  
-[3月的笔记](Tech/Tech1903.md)  
-[5月的笔记](Tech/Tech1905.md)  
-[6月的笔记](Tech/Tech1906.md)  
-[7月的笔记](Tech/Tech1907.md)  
+[2月的笔记](TechNote/Tech1902.md)  
+[3月的笔记](TechNote/Tech1903.md)  
+[5月的笔记](TechNote/Tech1905.md)  
+[6月的笔记](TechNote/Tech1906.md)  
+[7月的笔记](TechNote/Tech1907.md)  
