@@ -330,6 +330,10 @@ C中```const```表示只读的变量，既然把```const```看成是变量，那
 
 作为一个程序员，我们看到关键字const时，首先想到的应该是：只读。因为，它要求其所修饰的对象为常量，不可对其修改和二次赋值操作(不能作为左值出现)。
 
+#### C++实现String
+
+[STL 的string类怎么啦？陈浩](https://blog.csdn.net/haoel/article/details/1491219)
+
 ## 参考
 
 [C++经典面试题](https://www.cnblogs.com/yjd_hycf_space/p/7495640.html)
