@@ -160,6 +160,10 @@ unlist=np.unique(df["colume"])
 df.nunique()
 ```
 
+## 可视化
+
+### [Bar Chart Race in Python with Matplotlib](https://towardsdatascience.com/bar-chart-race-in-python-with-matplotlib-8e687a5c8a41)
+
 ## LightingBGM
 
 ### LightingBGM评价函数设置为f1_score
@@ -183,7 +187,7 @@ bst = lgb.train(params, dtrain, num_boost_round = 30000, valid_sets = dvalid,ver
 [f1_score metric in lightgbm](https://stackoverflow.com/questions/50931168/f1-score-metric-in-lightgbm)  
 [sklearn.metrics.f1_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
 
-# 参考资料
+## 参考资料
 
 [蓝鲸网站使用python进行数据清洗](http://bluewhale.cc/2016-08-21/python-data-cleaning.html)  
 [Pandas数据清洗](https://www.cnblogs.com/BoyceYang/p/8182053.html)  
