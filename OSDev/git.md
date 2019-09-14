@@ -66,13 +66,17 @@ Git是分布式版本控制系统，SVN是集中式版本控制系统。
 ### 常见操作
 
 ```bash
+git init # 使用之前需要先初始化
 git show # 显示某次提交的内容 git show $id
-git add <file> # 将工作文件修改提交到本地暂存区
+git add <file> # 将工作文件修改提交到本地暂存区 
+git add .
+git commit -m ' ' #  
 git rm <file> # 从版本库中删除文件
 git reset <file> # 从暂存区恢复到工作文件
 git reset HEAD^ # 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改
 git diff <file> # 比较当前文件和暂存区文件差异 git diff
 git log -p <file> # 查看每次详细修改内容的diff
+git log # 按q退出
 git branch -r # 查看远程分支
 git merge <branch> # 将branch分支合并到当前分支
 git stash # 暂存
