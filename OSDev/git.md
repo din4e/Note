@@ -41,23 +41,23 @@ Git是分布式版本控制系统，SVN是集中式版本控制系统。
 2. 不符合常规思维；
 3. 代码保密性差，一旦开发者把整个库克隆下来就可以完全公开所有代码和版本信息；
 
-## 基本操作区别：```reset```与```rebase```，```pull```与```fetch```，```rebase```和```merge```的区别
+## 基本操作区别：`reset`与`rebase`，`pull`与`fetch`，`rebase`和`merge`的区别
 
-### ```reset```与```rebase```的区别
+### `reset`与`rebase`的区别
 
-```reset```不修改commit相关的东西，只会去修改.git目录下的东西。  
-```rebase``` 会试图修改你已经commit的东西，比如覆盖commit的历史等，但是不能使用rebase来修改已经push过的内容，容易出现兼容性问题。rebase还可以来解决内容的冲突，解决两个人修改了同一份内容，然后失败的问题。  
+`reset`不修改commit相关的东西，只会去修改.git目录下的东西。  
+`rebase` 会试图修改你已经commit的东西，比如覆盖commit的历史等，但是不能使用rebase来修改已经push过的内容，容易出现兼容性问题。rebase还可以来解决内容的冲突，解决两个人修改了同一份内容，然后失败的问题。  
 
-### ```pull```与```fetch```的区别
+### `pull`与`fetch`的区别
 
-```pull``` 使用```git fetch```是取回远端更新，不会对本地执行```merge```操作，不会去动你的本地的内容。而是用```git pull```会更新你本地代码到服务器上对应分支的最新版本
+`pull` 使用`git fetch`是取回远端更新，不会对本地执行`merge`操作，不会去动你的本地的内容。而是用`git pull`会更新你本地代码到服务器上对应分支的最新版本
 
-### ```rebase```和```merge```的区别
+### `rebase`和`merge`的区别
 
-```git merge```把本地代码和已经取得的远程仓库代码合并。
-```git rebase```是复位基底的意思，gitmerge会生成一个新的节点，之前的提交会分开显示，而rebase操作不会生成新的操作，将两个分支融合成一个线性的提交。
+`git merge`把本地代码和已经取得的远程仓库代码合并。
+`git rebase`是复位基底的意思，gitmerge会生成一个新的节点，之前的提交会分开显示，而rebase操作不会生成新的操作，将两个分支融合成一个线性的提交。
 
-### ```rebase```深入介绍
+### `rebase`深入介绍
 
 [rebase](https://www.codercto.com/a/45325.html)有两种用处合并分支以及合并commit。
 
