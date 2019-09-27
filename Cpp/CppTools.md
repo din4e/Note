@@ -39,3 +39,12 @@ void SplitString(const std::string& s, std::vector<std::string>& v, const std::s
   	if(pos1 != s.length()) v.push_back(s.substr(pos1));
 }
 ```
+
+## vector 和数组转换
+
+```cpp
+int a[]={0,0,1,1};
+vector<int> varr(arr, arr+5);
+//OR
+std::vector<int> v({0,0,1,1});
+```
