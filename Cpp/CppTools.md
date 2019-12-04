@@ -73,3 +73,16 @@ vector<int> varr(arr, arr+5);
 //OR
 std::vector<int> v({0,0,1,1});
 ```
+
+## 有趣的代码 
+
+### 用字符串做`for`的循环内容
+
+```cpp
+for (char i = 'a'; i < 'y'; i++) {
+	string filename(1,i); 
+	filename= "data/enum/" + filename + ".csv";
+}
+```
+
+
