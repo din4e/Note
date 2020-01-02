@@ -349,6 +349,45 @@ STL中的sort并非只是普通的快速排序，除了对普通的快速排序�
 
 快速排序最关键的地方在于枢轴的选择，最坏的情况发生在分割时产生了一个空的区间，这样就完全没有达到分割的效果。STL采用的做法称为median-of-three，即取整个序列的首、尾、中央三个地方的元素，以其中值作为枢轴。
 
+### 需要注意地问题(来自王)
+
++ C++虚函数
++ 二叉树、四叉树、八叉树的应用
++ [操作系统](https://blog.csdn.net/csdn_chai/article/details/78002202)
++ 数论算法
++ [迭代器失效](https://blog.csdn.net/qq_37964547/article/details/81160505)
++ 堆、堆排序、优先队列
++ 红黑树、平衡二叉树、b树（区别，各自优劣，应用（如stl map用了红黑树，DB中用了B树））
++ 进程、线程区别、多线程
++ C++ STL
++ mutlimap
++ [c++模板类](https://github.com/wuye9036/CppTemplateTutorial/blob/master/ReadMe.md?tdsourcetag=s_pctim_aiomsg)
++ TCP 三次握手和UDP区别
+UDP一个一个报文接收就可以，TCP也是这样吗？这个问题刚开始没有太理解，答的不是，因为TCP接收到报文顺序不一定是发送的顺序。面试官说这是TCP内部的实现。然后我问是socker编程的时候的区别吗，答了TCP比UDP多了listen和accept。
++ C++ static
++ 操作系统调度、页表、缓存算法（LRU，RR等）
++ IP，部分地址的默认功能、掩码、DNS等等
++ 假设有两个很大的数组，每个几万条数据，如何快速求交集？用Redis的Set可以做，或者用BitMap，每条数据置个位，直接与运算就能求交集了。
++ 排序算法的优劣，稳定与不稳定
++ DFS&BFS
++ 字符串压缩->哈夫曼编码
++ c++ 指针和引用
++ c++多态（虚函数）
++ c++11 新特性：智能指针等
++ 手撕快排，利用快排结构优化某些问题
++ 字符串匹配
++ KD树
++ 红黑树
++ 卡马克算法
++ 并查集
++ 全局解释器锁
++ python内存管理
+
+
+
+
+
+
 ## 参考
 
 [C++经典面试题](https://www.cnblogs.com/yjd_hycf_space/p/7495640.html)
