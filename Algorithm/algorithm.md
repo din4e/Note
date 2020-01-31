@@ -2,8 +2,9 @@
 
 ## 1. 数据结构
 
-双指针 [leetcode27](leetcode/code/27.md)
-
+双指针 
+[leetcode27](leetcode/code/27.md)
+[leetcode485.最大连续1的个数](leetcode/code/485.md)
 ## 2. 算法
 
 ### 综合类算法
@@ -14,4 +15,4 @@
 
 位图索引（位图法即Bitmap）。
 
-#### [简单的高进度算法](https://blog.csdn.net/weixin_42172261/article/details/86775037)
+#### [简单的高精度算法](https://blog.csdn.net/weixin_42172261/article/details/86775037)
