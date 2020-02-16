@@ -2,19 +2,25 @@
 
 阿東有在努力积累吖.
 
-## C++相关的内容
+## 1. 理论学习
 
-### [C++面试基础](Cpp/CppInterview.md)
+### 1.1 机器学习
 
-### [C++PrimerPlus阅读笔记](Cpp/C++PrimerPlus.md)
+### [《统计机器学习》](StatisticalLearning/StatisticalLearning.md) 李航 第一版
 
-## 不同系统下的工具及配置
+## 2. 工具配置及使用
 
 ### [Git](OSDev/git.md)
 
 ### [Xcode](OSDev/Xcode.md)
 
-## Python相关内容
+## 3. C++相关的内容
+
+### [C++面试基础](Cpp/CppInterview.md)
+
+### [C++PrimerPlus阅读笔记](Cpp/C++PrimerPlus.md)
+
+## 4. Python相关内容
 
 ### [数据科学](Pyhton/DataScience.md)
 
@@ -24,13 +30,8 @@
 
 Python根据地址获取经纬度及求距离
 
-## 机器学习
 
-### [《统计机器学习》](StatisticalLearning/StatisticalLearning.md)
-
-李航 第一版
-
-## 一些杂乱的技术笔记
+## 4. 技术杂记
 
 [2月的笔记](TechNote/Tech1902.md)  
 [3月的笔记](TechNote/Tech1903.md)  

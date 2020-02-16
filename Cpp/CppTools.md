@@ -2,7 +2,7 @@
 
 方便复制粘贴。
 
-## `String`类
+## 1. `String`类
 
 ### [单个`char`转`string`](https://blog.csdn.net/carbon06/article/details/79353821)
 ```cpp
@@ -23,7 +23,7 @@ string str2 = ss.str();
 cout << to_string(c) << endl;
 ```
 
-## 输入输出类
+## 2. 输入输出处理
 
 ### 处理`CSV`文件或类`CSV`的输入方式
 
@@ -63,7 +63,7 @@ void SplitString(const std::string& s, std::vector<std::string>& v, const std::s
 }
 ```
 
-## `STL`注意事项以及技巧
+## 3. `STL`注意事项以及技巧
 
 ### `vector`和数组转换
 
@@ -74,9 +74,11 @@ vector<int> varr(arr, arr+5);
 std::vector<int> v({0,0,1,1});
 ```
 
-## 有趣的代码 
+## 4. 有趣的基础知识
 
-### 用字符串做`for`的循环内容
+### 4.1 `for`循环
+ 
+#### 4.1.1 用字符串做循环内容
 
 ```cpp
 for (char i = 'a'; i < 'y'; i++) {
@@ -84,5 +86,9 @@ for (char i = 'a'; i < 'y'; i++) {
 	filename= "data/enum/" + filename + ".csv";
 }
 ```
+#### 4.1.2 定义双变量
 
+```cpp
+for(i=0,j=s.size()-1;i<j;i++,j--) swap(s[i],s[j]);
+```
 
