@@ -3,8 +3,6 @@
 ## 1. 数据结构
 
 双指针 
-[leetcode27](leetcode/code/27.md)
-[leetcode485.最大连续1的个数](leetcode/code/485.md)
 
 ## 2. 算法
 
