@@ -54,6 +54,8 @@ delete[]mTest2; // 错
 
 #### 求下面函数的返回值（微软）
 
+位运算
+
 ```cpp
 int func(x) {
     int countx = 0;
