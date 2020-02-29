@@ -11,6 +11,6 @@ $\quad$假设$f(x)$是$\mathbb{R}^{n}$上具有**一阶连续导数的函数**�
 输出：$f(x)$的极小点$x^* $。  
 (1)取初值$x^{(0)}\in\mathbb{R}^{n}$，置 $k=0$  
 (2)计算$f(x^{(0)})$  
-(3)计算梯度$g_k =g(x^{(k)})$，当 $||g_k||<\varepsilon$ 时，停止迭代，令$x^*=x^{(k)}$；否则，$p_k=-g(x^{(k)})$，求$\lambda_k$，使$f(x^{(k)}+\lambda_kp_k)=\mathop{min}\limits_{\lambda\geqslant 0}{f(x_{(k)}+\lambda p_k)}$  
-(4)置$x^{(k+1)}=x^{(k)}+\lambda_kp_k$，计算$f(x^{(k+1)})$当$||f(x^{(k+1)}-f(x^{(k)}))||<\varepsilon$或$||x^{(k+1)}-x^{(k)}||<\varepsilon$时，停止迭代，$x^*=x^{(k+1)}$  
+(3)计算梯度$g_k =g(x^{(k)})$，当$||g_k||<\varepsilon$时，停止迭代，令$x^* =x^{(k)}$；否则，$p_k=-g(x^{(k)})$，求$\lambda_k$，使$f(x^{(k)}+\lambda_kp_k)=\mathop{min}\limits_{\lambda\geqslant 0}{f(x_{(k)}+\lambda p_k)}$  
+(4)置$x^{(k+1)}=x^{(k)}+\lambda_kp_k$，计算$f(x^{(k+1)})$当$||f(x^{(k+1)}-f(x^{(k)}))||<\varepsilon$或$||x^{(k+1)}-x^{(k)}||<\varepsilon$时，停止迭代，$x^* =x^{(k+1)}$  
 (5)否则 $k=k+1$，转到(3)。  
