@@ -19,7 +19,7 @@
 `x|=1<<n` 第 n 位置 1 ；  
 `x&=~(1<<n)` 第 n 位置 0 ；   
 `x^=(1<<n)` 第 n 位取反；   
-`x&(x-1)` 找从右向左数的第一个 1 ；  
+`x&(x-1)` 去掉右向左数的第一个 1 ；  
 `(!(x&(x-1)) )&&x` 判断 x 是否是 2 的正整数冪 ；  
 `x&(x-1)==0` 判断 x 是否是 2 的 n 次幂，如果的结果为 0 则说明是 ；  
 
@@ -150,4 +150,5 @@ for(int j=k;j;j=(j-1)*k) /*...*/ ;
 ## 参考资料
 
 [leetcode知乎](https://www.zhihu.com/question/38206659/answer/736472332)     
-[斯坦福的整理](http://graphics.stanford.edu/~seander/bithacks.html#OperationCounting )  
+[斯坦福的整理](http://graphics.stanford.edu/~seander/bithacks.html#OperationCounting)  
+[cnblog的一篇整理](https://www.cnblogs.com/thrillerz/p/4530108.html)  
