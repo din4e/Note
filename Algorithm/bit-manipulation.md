@@ -103,14 +103,14 @@ for(int j=k;j;j=(j-1)*k) /*...*/ ;
 // k = 101 ; j = 101 => 100 => 001 ;
 ```
 
-2.4 n皇后问题的位运算求解（n<32）。
+2.4 [n皇后问题的位运算求解（n<32）](https://blog.csdn.net/kai_wei_zhang/article/details/8033194)。
 ```cpp
 void test(int row, int ld, int rd)  {       
     int pos, p;        
     if (row!=upperlim) {            
         pos=upperlim&(~(row|ld|rd));     
         while(pos) {       
-            p=pos&(~pos+1);         
+            p=pos&(~pos+1); // p=pos&(-pos);         
             pos=pos-p;   
             test(row|p, (ld|p)<<1, (rd|p)>>1);    
         }  
@@ -134,17 +134,18 @@ void test(int row, int ld, int rd)  {
 
 3.2.1 海量数据判断重复：给 40 亿个不重复的 unsigned int 的整数，没有排过序，然后再给一个数，如果快速判断这个数是否在那 40 亿个数当中（腾讯面试题)；
 
-3.2.3 位图法排序；  
+3.2.3 位图法排序：不重复的数据。
 
 ## 4. 小结
 
-力扣上的位图法题目一般都会卡时间，特征也比较明显，比如特征数据长度短`data.legth<=16`，数据大量重复性高。
+力扣上的位图法题目一般都会卡时间，特征也比较明显，比如特征数据长度短`data.legth<=16`，超过整型范围就不允许。数据大量，重复性高。
+
 
 位运算虽然效率高，但是可读性不强。实际写代码的时候，编译器可能自动将一些运算优化成位运算了，做实验有可能看不出效果。
 
 最后，别问，看到神奇代码就是一顿乱背。
 ```cpp
-for(int j=k;j;j=(j-1)*k) /*...*/ ;
+for (int j=k;j;j=(j-1)*k) /*...*/ ;
 ```
 
 ## 参考资料
