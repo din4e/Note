@@ -5,6 +5,23 @@ STL入门specialize之路:
 C++ template学习泛化以及深入理解STL第一道门槛：class template、function template、member template、specialization、partial specialization。STL大量使用了operator overloading。
 运用STL，了解泛型技术和STL学理、最终扩充STL。
 
+## 2 空间配置器
+
+### 2.3 内存基本处理工具
+
+三个函数都有commit or rollback构造所有必须元素，否则不构造任何函数。
+
+`uninitialized_copy()` 包含两步：
+
++ 配置空间区块
++ 在真个区块上构造元素  
+
+`uninitialized_fill()`
+
+`uninitialized_fill_n()`
+
+POD必然拥有trivial ctor/dtor/copy/assignment函数，可以高效初值填充。  
+
 ## 3 迭代器以及`traits`编程技法
 
 `iterator`定义：依序巡访某个聚合物（容器）所含的元素，但不暴露聚合物内部表达方式的方法。
