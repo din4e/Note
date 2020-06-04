@@ -13,7 +13,7 @@ C++ template学习泛化以及深入理解STL第一道门槛：class template、
 
 `uninitialized_copy()` 包含两步：
 
-+ 配置空间区块
++ **配置空间区块**
 + 在真个区块上构造元素  
 
 `uninitialized_fill()`
@@ -65,6 +65,9 @@ int main(){
     func(&i);
 }
 ```
+## 3.7 `__type_traits` 
+
+`iterator_traits`负责萃取迭代器的特性，`__type_traits`负责萃取型别的特性。
 
 # 4
 
@@ -74,6 +77,15 @@ int main(){
 
 list的节点、迭代器、数据结构设计  
 在尾部添加空白节点就符合前闭后开的要求  
+
+## 4.6 `queue`
+
+STL中queue是一个container adapter，而不算container。默认的情况下以deque作为底层结构，当然也可以用list作为底层结构，list也是双向开口的数据结构。
+操作包含：`empty()`、`size()`、`front()`、`back()`、`push()`、`pop()`。
+```cpp
+tamplate <class T, class Sequence=deque<T> >
+queue<int,list<int>>  q;//使用list作为低层结构；
+```
 
 # 5
 
