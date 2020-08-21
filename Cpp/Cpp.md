@@ -1,13 +1,13 @@
 # C++ 后端面试资料整理
 
-### 
+## 关键字
 
-## [`extern`](https://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777431.html)
+### [`extern`](https://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777431.html)
 
 + 被 extern 限定的函数或变量是 extern 类型的，以标示变量或者函数的定义在别的文件中，提示编译器遇到此变量和函数时在其他模块中寻找其定义。
-+ 此外extern也可用来进行链接指定。被 extern "C" 修饰的变量和函数是按照 C 语言方式编译和链接的，extern "C" 的作用是让 C++ 编译器将 extern "C" 声明的代码当作 C 语言代码处理，可以避免 C++ 因**符号修饰**导致代码不能和C语言库中的符号进行链接的问题。
++ extern也可用来进行链接指定。被 extern "C" 修饰的变量和函数是按照 C 语言方式编译和链接的，extern "C" 的作用是让 C++ 编译器将 extern "C" 声明的代码当作 C 语言代码处理，可以避免 C++ 因**符号修饰**导致代码不能和C语言库中的符号进行链接的问题。
 
-## [`static`](https://blog.csdn.net/ruo_bing/article/details/82780299)
+### [`static`](https://blog.csdn.net/ruo_bing/article/details/82780299)
 
 1. 修饰普通变量，修改变量的存储区域和生命周期，**使变量存储在静态区**，在 main 函数运行前就分配了空间，如果有初始值就用初始值初始化它，如果没有初始值系统用默认值初始化它。
 2. 修饰普通函数，表明函数的作用范围，**仅在定义该函数的文件内才能使用**。在多人开发项目时，为了防止与他人命名空间里的函数重名，可以将函数定位为 `static` 。
