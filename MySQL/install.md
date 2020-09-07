@@ -43,7 +43,7 @@ default-character-set=utf8
 
 忘了密码
 
-```sql
+```bash
 # 会产生一个随机密码
 mysqld --initialize --user=mysql --console 
 mysqld -install
@@ -54,13 +54,13 @@ exit
 mysql -u root -p
 ```
 
-```sql
+```bash
 net stop mysql
 ```
 
-### SQL
+### 2. SQL语句
 
-```sql
+```bash
 show databases;
 create database test;
 use test;
@@ -69,7 +69,7 @@ show tables;
 
 创建数据表
 
-```sql
+```bash
 CREATE TABLE pet (
     name VARCHAR(20),
     owner VARCHAR(20),
@@ -99,13 +99,13 @@ desc pet;
 
 查看表中的记录
 
-```sql
+```bash
 selet * form pet;
 ```
 
 如何添加记录
 
-```sql
+```bash
 INSERT INTO pet
 VALUES ('Ruffball','Dinae','hamster','f','1999-03-30',NULL);
 insert into pet
@@ -125,3 +125,114 @@ FLOAT
 DOUBLE  
 DECIMAL  
 
+```bash
+create table testtype (number TINYINT);
+insert into testtype values(128);
+insert into testtype values(128);
+```
+
+增加，删除，查 改。
+
+```bash
+insert into pet values ('David','Dinae','hamster','f','1999-03-30',NULL);
+delete from pet where name='David';
+update pet set name='DD' where owner='Dinae';
+```
+
+约束种类：
+
++ 主键约束
+  + (`primary key`)：唯一确定一张表的一个记录。通过某个字段添加字段。使得该字段不重复且不为空。
+
+    ```bash
+    create table user(
+        id int primary key,
+        name varchar(20)
+    );
+    Query OK, 0 rows affected (0.10 sec)
+    ```
+
+    ```bash
+    mysql> desc user;
+    +-------+-------------+------+-----+---------+-------+
+    | Field | Type        | Null | Key | Default | Extra |
+    +-------+-------------+------+-----+---------+-------+
+    | id    | int         | NO   | PRI | NULL    |       |
+    | name  | varchar(20) | YES  |     | NULL    |       |
+    +-------+-------------+------+-----+---------+-------+
+    2 rows in set (0.00 sec)
+    ```
+
+    ```bash
+    insert into user values(1,'张三');
+    mysql> insert into user values(1,'张三');
+    ERROR 1062 (23000): Duplicate entry '1' for key 'user.PRIMARY'
+    mysql> insert into user values(2,'张三');
+    Query OK, 1 row affected (0.04 sec)
+    mysql> insert into user values(NULL,'张三');
+    ERROR 1048 (23000): Column 'id' cannot be null
+    ```
+
+  + 联合主键：
+
+    ```sql
+    create table user2(
+        id int,
+        name varchar(20),
+        passward varchar(20),
+        primary key(id,name)
+    );
+    ```
+
+    ```bash
+    insert into user2 values(1,'张三','123');
+    insert into user2 values(1,'张三','123'); # error
+    insert into user2 values(2,'张三','123');
+    insert into user2 values(NULL,'张三','123'); # error
+    ```
+
++ 自增约束：
+
+    ```sql
+    create table user3(
+        id int primary key auto_increment,
+        name varchar(20)
+    );
+    insert into user3 (name) values ('张三');
+    insert into user3 (name) values ('张三');
+    ```
+
+    ```bash
+    mysql> select * from user3;
+    +----+------+
+    | id | name |
+    +----+------+
+    |  1 | 张三 |
+    |  2 | 张三 |
+    +----+------+
+    2 rows in set (0.00 sec)
+
+    mysql> desc user3;
+    +-------+-------------+------+-----+---------+----------------+
+    | Field | Type        | Null | Key | Default | Extra          |
+    +-------+-------------+------+-----+---------+----------------+
+    | id    | int         | NO   | PRI | NULL    | auto_increment |
+    | name  | varchar(20) | YES  |     | NULL    |                |
+    +-------+-------------+------+-----+---------+----------------+
+    2 rows in set (0.00 sec)
+    ```
+
+    ```sql
+    create table user3(
+        id int,
+        name varchar(20)
+    );
+    alter table user4 add primary key(id);
+    alter table user4 drop primary key;
+    alter table usr4 modify id int primary key;
+    ```
+
++ 外键约束
++ 唯一约束
++ 非空约束
++ 默认约束
