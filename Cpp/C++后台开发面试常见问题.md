@@ -13,7 +13,6 @@
 + top k 堆的各种时间复杂度
 + 手撕代码 两个链表找交点
 
-
 ## 操作系统
 
 + 在单线程中 i++（++i） ，都是使用三个指令来实现的：1. 将值从内存拷贝到寄存器； 2. 寄存器自增；3. 将值从寄存器拷贝到内存；
@@ -21,7 +20,7 @@
 + 进程间的通信方式
 + epoll怎么实现的，和poll，select有啥区别
 
-## 计算机网络：
+## 计算机网络
 
 + [TCP和UDP的区别](https://www.cnblogs.com/williamjie/p/9390164.html)
   + TCP面向连接（如打电话要先拨号建立连接）；UDP是无连接的，即发送数据之前不需要建立连接；
@@ -71,4 +70,3 @@
 + [设计模式笔记 带图](https://www.cnblogs.com/kaoleba/p/11189065.html)
 
 [STL中的sort函数实现原理](https://blog.csdn.net/vanturman/article/details/81706538)
-
