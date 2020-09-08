@@ -232,7 +232,127 @@ update pet set name='DD' where owner='Dinae';
     alter table usr4 modify id int primary key;
     ```
 
-+ 外键约束
-+ 唯一约束
-+ 非空约束
-+ 默认约束
++ 唯一约束:约束修饰的字段的值不能重复,可以为空，主键不能为空
+  
+    ```sql
+    create table user5(
+        id int,
+        name varchar(20)
+    );
+    alter table user5 add unique(name);
+    ```
+
+    ```bash
+    mysql> desc user5;
+    +-------+-------------+------+-----+---------+-------+
+    | Field | Type        | Null | Key | Default | Extra |
+    +-------+-------------+------+-----+---------+-------+
+    | id    | int         | YES  |     | NULL    |       |
+    | name  | varchar(20) | YES  | UNI | NULL    |       |
+    +-------+-------------+------+-----+---------+-------+
+    2 rows in set (0.00 sec)
+    ```
+
+    ```sql
+    insert into user5 values(1,'张三');
+    insert into user5 values(1,'张三'); # ERROR 1062 (23000): Duplicate entry '张三' for key 'user5.name'
+    insert into user5 values(1,'李四'); # OK.
+    ```
+
+    ```sql
+    create table user8(
+        id int,
+        name varchar(20),
+        unique(name,id) # 可以写多个
+    );
+    create table user7(
+        id int,
+        name varchar(20) unique
+    );
+    ```
+
+    删除唯一约束
+
+    ```sql
+    alter table user7 drop index name;
+    alter table user7 modeify varchar(20) unique;
+    ```
+
+    小结:
+    1. 建表的时候添加
+    2. alter ... add ...
+    3. alter ... modify ...
+    4. 删除 alter ... drop ...
+
++ 非空约束:修饰的字段不能为空
+
+    ```sql
+    create table user9(
+        id int,
+        name varchar(20) not null
+    );
+    insert into user9 (id) values (1); # ERROR
+    insert into user9 values(1,'张三');
+    insert into user9 values('李四');
+    ```
+
++ 默认约束：没有传值就使用默认值，传了就不使用。
+
+    ```sql
+    create table user10(
+        id int,
+        name varchar(20),
+        age int default 10
+    );
+    insert into user10 (id,name) values (1,'张三');
+    ```
+
++ 外键约束：涉及到两个表：主表和副表 附表子表
+
+    ```sql
+    create table classes(
+        id int primary key,
+        name varchar(20)
+    );
+    create table students(
+        id int primary key,
+        name varchar(20),
+        class_id int,
+        foreign key (class_id) references classes(id)
+    );
+    ```
+
+    ```bash
+    mysql> desc classes;
+    +-------+-------------+------+-----+---------+-------+
+    | Field | Type        | Null | Key | Default | Extra |
+    +-------+-------------+------+-----+---------+-------+
+    | id    | int         | NO   | PRI | NULL    |       |
+    | name  | varchar(20) | YES  |     | NULL    |       |
+    +-------+-------------+------+-----+---------+-------+
+    2 rows in set (0.00 sec)
+
+    mysql> desc students;
+    +----------+-------------+------+-----+---------+-------+
+    | Field    | Type        | Null | Key | Default | Extra |
+    +----------+-------------+------+-----+---------+-------+
+    | id       | int         | NO   | PRI | NULL    |       |
+    | name     | varchar(20) | YES  |     | NULL    |       |
+    | class_id | int         | YES  | MUL | NULL    |       |
+    +----------+-------------+------+-----+---------+-------+
+    3 rows in set (0.00 sec)
+    ```
+
+    ```sql
+    insert into classes values (1,'一班');
+    insert into classes values (2,'二班');
+    insert into classes values (3,'三班');
+    insert into classes values (4,'四班');
+
+    insert into students values (1001,'张三',1);
+    insert into students values (1001,'张三',5); # ERROR
+    delete from classes where id=4;
+    ```
+
+    1. 主表没有的数据，副表不能使用
+    2. 主表中的记录被副表引用，是不可以被删除的
